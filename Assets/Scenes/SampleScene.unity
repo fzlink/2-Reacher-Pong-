@@ -887,10 +887,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
-    - target: {fileID: 170563219385754637, guid: 9dcc6b882e09367409d05f0db911ca7e, type: 3}
-      propertyPath: initThrowSpeed
-      value: 17
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dcc6b882e09367409d05f0db911ca7e, type: 3}
 --- !u!1001 &4460534089264790920

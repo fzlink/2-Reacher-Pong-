@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156697348700394248}
   - component: {fileID: 170563219385754637}
+  - component: {fileID: 2490063572091884028}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -77,8 +78,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4158ee960b0a9114fb581086c45a53dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RB: {fileID: 156697348991975131}
-  initThrowSpeed: 10
+  RB: {fileID: 2490063572091884028}
+  initThrowSpeed: 22
+--- !u!50 &2490063572091884028
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156697348700394251}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 64fc5f2c5b8d3a246afd514f84c344c6, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &156697348991975133
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,9 +111,8 @@ GameObject:
   m_Component:
   - component: {fileID: 156697348991975130}
   - component: {fileID: 156697348991975128}
-  - component: {fileID: 156697348991975131}
   m_Layer: 0
-  m_Name: RB
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,27 +150,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &156697348991975131
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156697348991975133}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 64fc5f2c5b8d3a246afd514f84c344c6, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &156697350109009013
 GameObject:
   m_ObjectHideFlags: 0

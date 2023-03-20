@@ -13,7 +13,7 @@ public class BallController : MonoBehaviour
         ThrowBall(initDirection, initThrowSpeed);
     }
 
-    private void ThrowBall(Vector2 direction, float speed)
+    public void ThrowBall(Vector2 direction, float speed)
     {
         RB.AddForce(direction * speed, ForceMode2D.Impulse);
     }

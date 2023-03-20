@@ -10,6 +10,8 @@ public abstract class PongController : MonoBehaviour
 
     private float maxY;
     private float minY;
+
+    private float pongDivisionMargin;
     
     protected virtual void Start()
     {
@@ -20,6 +22,7 @@ public abstract class PongController : MonoBehaviour
         
         maxY = max.y - margin;
         minY = min.y + margin;
+        pongDivisionMargin = Collider.bounds.size.y / 3;
     }
 
     protected void Move(Vector2? direction)
@@ -42,4 +45,23 @@ public abstract class PongController : MonoBehaviour
         transform.position = new Vector3(transform.position.x, clampedY);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        var ball = collision.collider.gameObject.GetComponentInParent<BallController>();
+        if (ball != null)
+        {
+            var point = collision.GetContact(0).point;
+            var direction = point - (Vector2) transform.position;
+            var xSign = direction.x < 0 ? -1f : 1f;
+            if (point.y < transform.position.y - (pongDivisionMargin/2))
+            {
+                ball.ThrowBall(new Vector2(xSign, -1f), 10f);
+            }
+            else if(point.y > transform.position.y + (pongDivisionMargin/2))
+            {
+                ball.ThrowBall(new Vector2(xSign, 1f), 10f);
+            }
+        }
+    }
 }

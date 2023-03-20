@@ -17,7 +17,7 @@ public class EnemyController : PongController
 
         while (true)
         {
-            while (timer < 1f)
+            while (timer < 2f)
             {
                 MoveTo(Ball.GetYPosition());
                 timer += Time.deltaTime;
