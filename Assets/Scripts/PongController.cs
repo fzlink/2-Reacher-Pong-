@@ -57,10 +57,17 @@ public abstract class PongController : MonoBehaviour
             if (point.y < transform.position.y - (pongDivisionMargin/2))
             {
                 ball.ThrowBall(new Vector2(xSign, -1f), 10f);
+                Debug.Log("Bottom Collision");
             }
             else if(point.y > transform.position.y + (pongDivisionMargin/2))
             {
                 ball.ThrowBall(new Vector2(xSign, 1f), 10f);
+                Debug.Log("Upper Collision");
+            }
+            else
+            {
+                ball.ThrowBall(direction, 10f);
+                Debug.Log("Middle Collision");
             }
         }
     }
